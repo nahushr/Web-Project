@@ -1,0 +1,322 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <script src="jquery.js"></script>
+<script src="jquery_validate.js"></script>
+ <script type="text/javascript">
+
+       $(document).ready(function()
+    { 
+            $("#register-form").validate({
+                rules: {
+                   	 firstname: {
+					 required:true,
+					 maxlength:24
+				    },
+                    
+                    	email: {
+                       	 	required: true,
+                        	email: true
+                    		}, 
+                    
+		    	phone:{
+		     		required:true,
+				minlength:8,
+				maxlength:8
+                    		},
+		    	age:{
+				required:true,
+				max:100,
+				min:15
+				},
+
+		  	 country:{
+                   		     required:true
+                    		}, 
+
+                    	type:"required"
+	         
+                },
+                messages: {
+                    firstname: {
+				required:"Please enter your firstname",
+				maxlength:"Name Should Not Exceed More Than 24 Characters"
+				},
+                    
+                    country:"Please select your country",  
+                   
+                    email: {	
+				required:"Please enter a valid email address",
+				email:"enter valid e-mail"
+		            },
+
+		    phone:{
+			required:"Please enter Your Contact No",
+			minlength:"please enter valid phone no.",
+			mAXlength:"please enter valid phone no."
+			},
+
+		    type:"Please enter the type",
+
+		    
+	
+                     },
+                 
+
+            });  
+
+});
+</script>
+<style>
+
+#new
+{
+border-style: solid;
+border-color: #00529F;
+border-width: 5px;
+}
+#header {
+    background-color: #00529F;
+	height:120px;
+	background-image:url("header.png");
+	background-repeat:no-repeat;
+}
+#nav {
+    background-color: A2214B;
+	height:40px;
+	text-color:white;	      
+}
+
+.button {
+    background-color: white; /* Green */
+    border: 0px;
+    color: blue;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: center;
+	height:40px;
+}
+
+h1 { color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif; font-size: 46px; font-weight: 100; line-height: 50px; letter-spacing: 1px; padding: 0 0 40px; border-bottom: double #555; }
+
+
+p { color: #bbc3c8; font-family: 'Verdana', sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+
+h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+
+
+
+*{
+ margin:0px;
+ padding:0px;
+
+}
+ h1{ color:red }
+body {
+    background-image: url("background.jpg");
+	background-size:100% 100%;
+}
+#content { background-color:#f9f9f9; padding:20px;  }
+h1 {
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#header {
+    background-color: #00a2d1;
+ height:50px;
+ text-align:center;
+}
+#header a
+{
+ color:#fff;
+ text-decoration:none;
+ font-size:35px;
+ font-family:Tahoma, Geneva, sans-serif;
+ position:relative;
+}
+
+#register-form {
+ background:#fff;
+    border: 1px solid #DFDCDC;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 25px 50px 10px;
+    width: 450px;
+ font-family:Tahoma, Geneva, sans-serif;
+}
+
+#register-form .fieldgroup {
+    background: url("form-divider.gif") repeat-x scroll left top transparent;
+    display: inline-block;
+    padding: 8px 10px;
+    width: 340px;
+	}
+fieldset{ border:none; }
+
+#register-form .fieldgroup input{
+    margin: 10px 0;
+    height: 40px;
+ width:100%;
+ border:solid#cdcdcd 1px;
+ border-radius:3px;
+ padding-left:10px;
+}
+
+
+#register-form .type input{
+    margin: 10px ;
+     height: 20px;
+ width:100%;
+float:left;
+text                                  -color:grey;
+ border:solid#cdcdcd 1px;
+ border-radius:3px;
+ padding-left:10px;
+}
+
+
+#register-form .submit {
+    padding: 10px;
+    height: 40px !important;
+ background:#00a2d1;
+ color:#fff;
+ font-weight:bolder;
+ border:solid #cdcdcd 1px;
+ border-radius:3px;
+}
+
+#register-form .fieldgroup label.error {
+    color: #FB3A3A;
+    display: inline-block;
+    font-weight:500;
+    padding: 0;
+    text-align: left;
+}
+
+</style>
+</head>
+<body>
+
+<a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\main - Copy.html"><img src="header.png" height="120px" width="100%"></a>
+
+<div id="new" class="btn-group btn-group-justified">
+  <a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\club.html" class="btn btn-primary">CLUB</a>
+  <a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\football.html" class="btn btn-primary">FOOTBALL</a>
+  <a href="file://localhost/c:/wamp/www/form.html" class="btn btn-primary">BOOK TICKETS</a>
+  <a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\fans.html" class="btn btn-primary">FANS</a>
+
+</div>
+
+<center>
+<h1>Book Ticket</h1>
+<form action="BookTicket.php" method="POST" id="register-form">
+    <div id="form-content">
+        <fieldset>
+
+            <div class="fieldgroup">
+                <input type="text" name="firstname" placeholder="First Name*" />
+            </div>
+
+
+            <div class="fieldgroup">
+                <input type="text" name="email" placeholder="Your E-mail ID*" />
+
+            </div>
+		<div class="fieldgroup">
+		<input type="number" name="phone" Placeholder="Your Contact NO."/>
+	        </div>
+
+		<div class="fieldgroup">
+		<input type="number" name="age" Placeholder="Your Age"/>
+	        </div>
+ 
+            <div class="fieldgroup">
+                <input type="text" name="country" placeholder="Your Country*" />
+            </div>
+
+	 
+          
+
+       
+
+		
+		<div class="fieldgroup">
+		NO. OF TICKETS:
+
+		<select name="N">
+		<option value="1" selected>1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		</select>
+
+		</div>
+         
+        
+            <div class="fieldgroup">
+                <input type="submit" value="Submit" class="submit">
+		<input type="reset" value="Reset" class="submit">
+            </div>
+
+        </fieldset>
+    </div>
+</form>
+</center>
+
+<hr>
+<center>
+<table>
+	<tr>
+	<td>
+	<a href="https://www.facebook.com/fcbarcelona/">
+	<img src="fb.jpg" height="50px" width="50px" align="right"/></td>
+	</a>
+
+	<td>
+	<a href="https://twitter.com/FCBarcelona">
+	<center><img src="twitter.png" height="50px" width="50px"/></center></td>
+	</a>
+
+	<td>
+	<a href="https://www.instagram.com/fcbarcelona/">
+	<img src="instagram.png" height="50px" width="50px" align="left" /></td>
+	</a>
+	</tr>
+</table>
+</center>
+<br><br>
+<center>
+<div>
+<button class="button"><a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\LegalTerms.html">Legal Terms</button></a>
+<button class="button"><a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\Accessibility.html">Accessibility</button></a>
+
+<button class="button"><a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\Contact1.html">Contact us</button></a>
+
+<button class="button"><a href="E:\WP PROJECT DONE\FINAL PROJECT\WP - Copy\project\History.html">Historical Archive</button></a>
+</div>
+
+<center><img src="sponsers.jpg" width="100%"></center>
+</center>
+
+</body>
+</html>
