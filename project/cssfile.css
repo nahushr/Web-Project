@@ -1,0 +1,15 @@
+<style>
+#header
+{
+	background-color: #040198;
+	height:70px;
+	background-image:url("img1.png");
+	background-repeat:no-repeat;
+}
+
+#nav
+{
+	background-color: red;
+	height:30px;
+}
+</style>

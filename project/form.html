@@ -1,0 +1,131 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+<script src="jquery_validate.js"></script>
+ <script type="text/javascript">
+
+       $(document).ready(function()
+    { 
+            $("#myform").validate({
+                rules: {
+                    fname: {
+			required:true,
+			maxlength:25,
+			minlength:3
+			},
+                    email: {
+                        required: true,
+                        email: true
+                    }, 
+                    country:{
+                        required:true
+                    },
+                    ticket:"required",
+	Comment:{
+	   required:true,
+	    }
+                 
+                },
+                messages: {
+                    fname: {
+			required:"Please enter your name",	
+			maxlength:"THE LENGHT SHOULD BE LESS THAN 25",
+			minlength:"the length should be greater or equal to 3",
+			},
+                    country:"Please select your city",  
+                   email: "Please enter a valid email address",
+                       gender:"Please enter the gender",
+                     },
+                 
+
+            });  
+
+});
+
+function cal()
+{
+	var avail=6;
+	var book=document.getElementById("N");
+	if(avail<book)
+	{
+		
+		alert("sold out");
+	}
+	else 
+	{
+		avail=avail-book;
+		alert("success!");
+	}
+};
+
+</script>
+</head>
+<body>
+<center>
+
+
+<form id="myform" action="" onsubmit="myFunction()">
+<fieldset>
+<legend><i><u>
+TICKET BOOKING</u></i>
+</legend>
+<table>
+	<tr>
+	<td><strong>NAME:</strong></td>
+	<td><input type="text" name="fname" size="15" required></td>
+	
+	
+	<tr>
+	<td><strong>E-MAIL:</strong></td>
+	<td><input type="text" name="email" size=20 required></td>
+	
+	
+	<tr>
+	<td><strong>PHONE:</strong></td>
+	<td><input type="number" name="phone" size="10" required></td>
+
+
+	<tr>
+	<td><strong>AGE:</strong></td>
+	<td><input type="number" name="age" min="15" max="100"></td>
+	
+
+	<tr>
+	<td><strong>COUNTRY:</strong></td>
+	<td><input type="text" name="country" required></td>
+	
+
+	<tr>
+	<td><strong>TICKET TYPE</strong></td>
+	<td><input type="radio" name="ticket" value="A">A
+	<input type="radio" name="ticket" value="B">B
+	<input type="radio" name="ticket" value="C">C
+	<input type="radio" name="ticket" value="D">D
+	</td>
+	
+
+	<tr>
+	<td><strong>NO. OF TICKETS</strong></td>
+	<td><select name="N">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select>
+	</td>
+</table>
+
+	<input type="submit" value="submit"  class="submit" onclick="cal()"> &nbsp&nbsp&nbsp&nbsp&nbsp
+	<input type="reset" value="reset">
+</fieldset>
+
+</form>
+</center>
+</body>
+</html>

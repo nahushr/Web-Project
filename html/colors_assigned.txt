@@ -1,0 +1,10 @@
+wp=green
+coa=blue
+cn=red
+maths=orange
+at=yellow
+itc=fuchsia
+a
+all tutorial=aqua
+all pracs=blueviolet
+

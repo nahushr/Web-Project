@@ -1,0 +1,234 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+ <script src="jquery.js"></script>
+<script src="jquery_validate.js"></script>
+ <script type="text/javascript">
+
+       $(document).ready(function()
+    { 
+            $("#register-form").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    }, 
+                    city:{
+                        required:true
+                    },
+                    
+                    gender:"required",
+	Comment:{
+	   required:true,
+	    }
+                 
+                },
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    city:"Please select your city",  
+                    
+                    email: "Please enter a valid email address",
+                       gender:"Please enter the gender",
+	Comment:"Please give your comment/suggestion here"
+                     },
+                 
+
+            });  
+
+});
+</script>
+<style>
+
+#new
+{
+border-style: solid;
+border-color: #00529F;
+border-width: 5px;
+}
+#header {
+    background-color: #00529F;
+	height:120px;
+	background-image:url("header.png");
+	background-repeat:no-repeat;
+}
+#nav {
+    background-color: A2214B;
+	height:40px;
+	text-color:white;	      
+}
+
+.button {
+    background-color: white; /* Green */
+    border: 0px;
+    color: blue;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: center;
+	height:40px;
+}
+
+
+*{
+ margin:0px;
+ padding:0px;
+
+}
+ h1{ color:red }
+body {
+    background-color: #ffff66;
+}
+#content { background-color:#f9f9f9; padding:20px;  }
+h1 {
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#register-form {
+ background:#fff;
+    border: 1px solid #DFDCDC;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 25px 50px 10px;
+    width: 450px;
+ font-family:Tahoma, Geneva, sans-serif;
+}
+
+#register-form .fieldgroup {
+    background: url("form-divider.gif") repeat-x scroll left top transparent;
+    display: inline-block;
+    padding: 8px 10px;
+    width: 340px;
+	}
+fieldset{ border:none; }
+
+#register-form .fieldgroup input{
+    margin: 10px 0;
+    height: 40px;
+ width:100%;
+ border:solid#cdcdcd 1px;
+ border-radius:3px;
+ padding-left:10px;
+}
+
+
+#register-form .gender input{
+    margin: 10px ;
+     height: 20px;
+ width:100%;
+float:left;
+text                                  -color:grey;
+ border:solid#cdcdcd 1px;
+ border-radius:3px;
+ padding-left:10px;
+}
+
+
+#register-form .submit {
+    padding: 10px;
+    height: 40px !important;
+ background:#00a2d1;
+ color:#fff;
+ font-weight:bolder;
+ border:solid #cdcdcd 1px;
+ border-radius:3px;
+}
+
+#register-form .fieldgroup label.error {
+    color: #FB3A3A;
+    display: inline-block;
+    font-weight:500;
+    padding: 0;
+    text-align: left;
+}
+
+</style>
+</head>
+<body>
+<center>
+<a href="main - Copy.html"><div id="header" width="100%"></div></a>
+	
+<div id="new" class="btn-group btn-group-justified">
+  <a href="club.html" class="btn btn-primary">CLUB</a>
+  <a href="football.html" class="btn btn-primary">FOOTBALL</a>
+  <a href="ticket-booking.html" class="btn btn-primary">BOOK TICKETS</a>
+  <a href="fans.html" class="btn btn-primary">FANS</a>
+
+</div>
+
+<h1>Contact Us</h1>
+
+<form action="" method="post" id="register-form">
+    <div id="form-content">
+        <fieldset>
+
+            <div class="fieldgroup">
+                <input type="text" name="firstname" placeholder="First Name*" />
+            </div>
+
+            <div class="fieldgroup">
+                <input type="text" name="lastname" placeholder="Last Name*" />
+            </div>
+
+            <div class="fieldgroup">
+                <input type="text" name="email" placeholder="Your E-mail ID*" />
+            </div>
+ 
+            <div class="fieldgroup">
+                <input type="text" name="city" placeholder="Your City*" />
+            </div>
+
+            <div class="fieldgroup">
+               <input type="password" name="password" placeholder="Your Password*" />
+            </div>
+
+             <div class="fieldgroup">
+              Comment/Suggestion:
+             <input type="textarea" name="Comment" rows=10 columns=10 placeholder="Please give your Comment/Suggestion Here"/>
+             </div>
+
+            <div class="gender">
+            <left>
+              Select Gender*:<br>
+               Male<input type="radio" name="gender"><br>
+                Female<input type="radio" name="gender"></left></div>
+         
+        
+            <div class="fieldgroup">
+                <input type="submit" value="Register" class="submit">
+            </div>
+
+        </fieldset>
+    </div>
+</form>
+</center>
+<center>
+<div>
+<button class="button"><a href="LegalTerms.html">Legal Terms</button></a>
+<button class="button"><a href="Accessibility.html">Accessibility</button></a>
+<button class="button"><a href="Contact1.html">Contact us</button></a>
+<button class="button">Historical Archive</button>
+</div>
+
+<center><img src="sponsers.jpg" width="100%"></center>
+</center>
+
+
+</body>
+</html>

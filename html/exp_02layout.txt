@@ -1,0 +1,16 @@
+design a registration firm using html in netbeans
+1.form --name action method
+2.input type=text-- name size maxlength
+3.input type=button-- value
+4.input type=checkbox-- name value
+5.input type=radio- name value 
+6.textarea
+7.input type=submit--value
+8.input type=reset--value
+9.input type=password--name size
+10.input type=image-- src name value
+select--name optiontag->
+fieldset legend label
+input type=email-- input type=date
+input type=date time(local)
+input type=time,url,number,range,search,-- placeholder autofocus required 
